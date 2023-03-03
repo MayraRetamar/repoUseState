@@ -1,4 +1,5 @@
 import React, {useState} from  'react'
+import './cachorros.css'
 import img1 from '../../imagenes/cachorro1.jpg'
 import img2 from '../../imagenes/cachorro2.jpeg'
 import img3 from '../../imagenes/cachorro3.jpg'
@@ -12,24 +13,36 @@ const Cachorros = () => {
     })
     
     const cargarImg1 = () => { 
+        
         setImagen({...imagen, imagen1: img1})
-    }
+    } 
+      
     const cargarImg2 = () => { 
-        setImagen({...imagen, imagen2: img2})
-    }
+        setImagen({...imagen, imagen2: img2}) 
+    } 
     const cargarImg3 = () => { 
         setImagen({...imagen, imagen3: img3}) 
     } 
   
   return (
-    <div>
+
+
+    <div className='contenedorPrincipal'>
         
-        <button onClick={() => cargarImg1()} className= "btn-1" >Imágen 1</button>
-        <div> {imagen.imagen1} </div>
-        <button onClick={() => cargarImg2()} className= "btn-2">Imágen 2</button>
-        <div> {imagen.imagen2} </div>
-        <button onClick={() => cargarImg3()} className= "btn-3">Imágen 3</button>
-        <div> {imagen.imagen3} </div>
+        <h2>Elegi una imágen</h2>
+        
+            <button onClick={() => cargarImg1()} className= "btn" >Imágen 1</button>
+            <div>
+                <img src= {imagen.imagen1} alt= "cachorro numero 1" className='img-tamaño' />
+            </div>
+            <button onClick={() => cargarImg2()} className= "btn">Imágen 2</button>
+            <div> 
+                <img src={imagen.imagen2} alt="cachorro numero 2" className='img-tamaño'/>
+            </div>
+            <button onClick={() => cargarImg3()} className= "btn">Imágen 3</button>
+            <div> 
+                <img src={imagen.imagen3} alt= "cachorro numero 3" className='img-tamaño'/>
+            </div>
 
       
     </div>

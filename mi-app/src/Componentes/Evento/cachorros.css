@@ -1,0 +1,22 @@
+.contenedorPrincipal { 
+    padding: 20px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    
+}
+.contenedortitulo{ 
+    justify-content: center;
+}
+.img-tamaño{ 
+    width: 300px;
+    height: 300px;
+}
+.btn{ 
+    border-radius: 6px;
+    border: 1px solid black;
+	width: 75px;
+	height: 35px;
+	padding: 5px;
+	margin: 50px 10px;
+}
